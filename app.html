@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LOVE-O-METER</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://kit.fontawesome.com/126c863153.js" crossorigin="anonymous"></script>
+</head>
+    <title>
+      Love Meter
+    </title>
+  </head>
+  <body>
+    <div class="w3-content w3-section loveQuotes">
+
+ <p class="mySlides w3-animate-fading">
+   "If I speak in the tongues of men and of angels, but have not love, I am a noisy gong or a clanging cymbal"
+   <br />
+<span class="quoteRef">- 1 Corinthians 13:1</span>
+ </p>
+ <p class="mySlides w3-animate-fading">
+   "Love and compassion are necessities, not luxuries. Without them humanity cannot survive"
+   <br />
+<span class="quoteRef">- Dalai Lama</span>
+ </p>
+ <p class="mySlides w3-animate-fading">
+   "Love is like a flower-you've got to let it grow"
+   <br />
+<span class="quoteRef">- John Lennon</span>
+ </p>
+  <p class="mySlides w3-animate-fading">
+   "I have decided to stick with love. Hate is too great a burden to bear"
+   <br />
+<span class="quoteRef">- Martin Luther King</span>
+ </p>
+  <p class="mySlides w3-animate-fading">
+   "Love is of all passions the strongest, for it attacks simultaneously the head, the heart and the senses"
+   <br />
+<span class="quoteRef">- Lao Tzu</span>
+ </p>
+</div>
+  <hr />
+ <div class="w3-container w3-center userInput">
+   
+   <input class="w3-input" type="text" placeholder="YOUR NAME" name="userName" id="userName"/>
+   <input class="w3-input" type="text" placeholder="OTHER PERSON'S NAME" name="personName" id="personName"/>
+   <input class="w3-input" type="text" placeholder="RELATIONSHIP (e.g mother)" name="relationship" id="relationship"/>
+  
+    <button class="w3-center start_btn">SHOW <br /> LOVE <br /> PERCENT</button>
+    
+     <div id="loader"></div>
+    
+    <div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container loveHead"> 
+        <h4>
+          Dear <span id="userInput"></span>, <p id="selfLove">your <span id="relInput"></span> <span id="personInput"></span> loves you by
+          </p>
+        </h4>
+      </header>
+      <div class="w3-container">
+        <p id="lovePercent"></p>
+      </div>
+      <footer class="w3-container loveHead">
+        <p id="loveComment"></p>
+     
+    <button onclick="location.reload()" id="reload" type="submit">REFRESH</button>
+      </footer>
+    </div>
+  </div>
+ </div>
+ 
+ 
+<script src="script.js" type="text/javascript" charset="utf-8"></script>
+<script src="quotes.js" type="text/javascript" charset="utf-8"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+    var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 9000);    
+}
+  
+  </script>
+  </body>
+</html>
